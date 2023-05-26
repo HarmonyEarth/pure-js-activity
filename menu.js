@@ -2,9 +2,11 @@ const menuHeading = document.getElementById('menuHeadText');
 
 menuHeading.innerHTML = menuHeadText;
 
-const menuItem = document.getElementById('menuItem');
+const menuItems = document.getElementById('menuItems');
 
 for (i = 0; i < menu.length; i++) {
+  const menuItem = document.createElement('div');
+  menuItem.classList.add('menu-item');
   const menuImgTag = document.createElement('img');
   const menuItemName = document.createElement('h4');
   const menuItemPrice = document.createElement('h5');
@@ -19,4 +21,6 @@ for (i = 0; i < menu.length; i++) {
   menuItem.appendChild(menuItemPrice);
   menuItemDesc.innerHTML = menu[i].description;
   menuItem.appendChild(menuItemDesc);
+
+  menuItems.appendChild(menuItem);
 }
